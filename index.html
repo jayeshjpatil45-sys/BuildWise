@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuildWise · Construction Material & Wastage Management</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="sidebar">
+        <a href="#overview" class="brand"
+          ><span class="brand-icon">▥</span>buildwise<span class="brand-dot"
+            >.</span
+          ></a
+        >
+        <p class="tagline">BETTER SITES. LESS WASTE.</p>
+        <div class="workspace">
+          ▦ &nbsp; Community field project<small
+            >Construction & sustainability</small
+          >
+        </div>
+        <p class="nav-label">WORKSPACE</p>
+        <nav aria-label="Main navigation">
+          <a href="#overview" data-view="overview">◫ &nbsp; Overview</a
+          ><a href="#materials" data-view="materials"
+            >▤ &nbsp; Material inventory</a
+          ><a href="#waste" data-view="waste">♲ &nbsp; Waste management</a
+          ><a href="#community" data-view="community"
+            >♧ &nbsp; Community impact</a
+          ><a href="#project" data-view="project">ⓘ &nbsp; About the project</a>
+        </nav>
+        <div class="side-note">
+          <span>↗</span>
+          <h3>Small changes.<br />Stronger communities.</h3>
+          <p>Every material saved is one less resource wasted.</p>
+          <a href="#community">Explore community actions →</a>
+        </div>
+        <div class="side-footer">
+          <span class="avatar">CE</span>
+          <div>Student workspace<small>Academic prototype</small></div>
+        </div>
+      </aside>
+      <div class="app">
+        <header class="topbar">
+          <div>
+            <span class="muted">Workspace</span><span class="crumb">/</span
+            ><span id="breadcrumb">Overview</span>
+          </div>
+          <div class="top-actions">
+            <span class="demo-pill" id="mode-label">● Sample project</span
+            ><span class="date" id="today"></span>
+          </div>
+        </header>
+        <main id="main">
+          <section class="page-heading">
+            <div>
+              <p class="eyebrow">BUILD BETTER. WASTE LESS.</p>
+              <h1 id="page-title">Site overview</h1>
+              <p id="page-subtitle"></p>
+            </div>
+            <button class="button secondary" id="report-button">
+              ↓ Export report
+            </button>
+          </section>
+          <div class="project-strip">
+            <div>
+              <span class="live-dot"></span><strong id="site-label"></strong
+              ><span class="site-location" id="site-location"></span>
+            </div>
+            <button class="text-button" id="edit-site">Edit site ↗</button>
+          </div>
+          <div id="storage-warning" hidden class="notice">
+            Storage unavailable. Export a backup; changes are temporary.
+          </div>
+          <div id="view"></div>
+          <footer>
+            BuildWise · Community Engagement & Field Project<span
+              >Records stay in this browser ·
+              <button class="text-button" id="data-settings">
+                Manage data
+              </button></span
+            >
+          </footer>
+        </main>
+      </div>
+      <dialog id="modal">
+        <div class="dialog-heading">
+          <h2 id="modal-title"></h2>
+          <button
+            class="icon-button"
+            id="close-modal"
+            aria-label="Close dialog"
+          >
+            ×
+          </button>
+        </div>
+        <form id="modal-form"></form>
+      </dialog>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+    <script defer src="./app.js"></script>
+  </body>
+</html>
